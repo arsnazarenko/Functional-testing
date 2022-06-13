@@ -1,19 +1,16 @@
 package com.arsnaz.testing;
-import java.util.function.BiConsumer;
+
 public enum PropertiesConstants {
 
     /**
      * Drivers
      */
 
-    WEBDRIVER_CHROME_DRIVER("webdriver.chrome.driver", Context::setChromeDriver),
-    WEBDRIVER_FIREFOX_DRIVER("webdriver.gecko.driver", Context::setGeckoDriver);
+    WEBDRIVER_CHROME_DRIVER("webdriver.chrome.driver"),
+    WEBDRIVER_FIREFOX_DRIVER("webdriver.gecko.driver");
 
     private final String propertyName;
-    private final BiConsumer<Context, String> callback;
-
-    PropertiesConstants(String propertyName, BiConsumer<Context, String> callback) {
-        this.callback = callback;
+    PropertiesConstants(String propertyName) {
         this.propertyName = propertyName;
     }
 
@@ -21,7 +18,4 @@ public enum PropertiesConstants {
         return propertyName;
     }
 
-    public BiConsumer<Context, String> getCallback() {
-        return callback;
-    }
 }

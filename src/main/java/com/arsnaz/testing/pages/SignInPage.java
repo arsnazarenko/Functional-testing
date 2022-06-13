@@ -23,7 +23,7 @@ public class SignInPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-    public void inputName(String login) {
+    public void enterName(String login) {
         nameField.sendKeys(login);
     }
 
@@ -31,7 +31,7 @@ public class SignInPage extends Page {
         return driver.findElements(By.xpath("//*[@id=\"start\"]/div[5]/table/tbody/tr[1]/td/strong/font")).size() > 0;
     }
 
-    public void inputPassword(String password) {
+    public void enterPassword(String password) {
         passwordField.sendKeys(password);
     }
 

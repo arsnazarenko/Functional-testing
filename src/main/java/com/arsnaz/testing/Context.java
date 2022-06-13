@@ -1,8 +1,5 @@
 package com.arsnaz.testing;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Context {
     private String geckoDriver;
     private String chromeDriver;
